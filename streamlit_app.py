@@ -38,7 +38,7 @@ warehouse = "pc_rivery_wh"
 database = "pc_rivery_db" 
 schema = "public"
 my_cur.execute("USE WAREHOUSE PC_RIVERY_WH ")
-my_cur.execute("SELECT * from fruit_load_list")
+my_cur.execute("SELECT * from PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
 my_data_row = my_cur.fetchone()
 streamlit.text("Hello from Snowflake:")
 streamlit.text(my_data_row)
