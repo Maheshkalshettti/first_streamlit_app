@@ -36,8 +36,8 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 database = "pc_rivery_db" 
 schema = "public"
-# my_cur.execute("use role Accountdmin")
-# my_cur.execute("use warehouse compute_wh")
+ my_cur.execute("use role Accountdmin")
+ my_cur.execute("use warehouse compute_wh")
 my_cur.execute("SELECT * from fruit_load_list")
 my_data_row = my_cur.fetchone()
 streamlit.text("Hello from Snowflake:")
