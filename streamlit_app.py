@@ -39,7 +39,7 @@ database = "pc_rivery_db"
 schema = "public"
 my_cur.execute("USE WAREHOUSE PC_RIVERY_WH ")
 my_cur.execute("SELECT * from PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
-my_data_row = my_cur.fetchone()
+my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_row)
 
